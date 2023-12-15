@@ -2,9 +2,9 @@ name: Build-sphinx-docs
 
 on:
   push:
-    branches: [main]
+    branches: [production, develop]
   pull_request:
-    branches: [main]
+    branches: [production, develop]
 
   workflow_dispatch:
 
