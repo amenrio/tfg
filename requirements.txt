@@ -1,3 +1,5 @@
 sphinx
 sphinx-rtd-theme
 ghp-import
+pylint
+pyan3==1.1.1
