@@ -12,6 +12,16 @@ Grado en Creación Digital, Animación y Videojuegos
 Curso: 2023/24
 Fecha
 
+## Indice de Contenidos
+- [Información](#información)
+    - [Titulo](#titulo)
+    - [Palabras Clave](#palabras-clave)
+    - [Resumen](#resumen)
+        - [Castellano:](#castellano)
+        - [Galego](#galego)
+        - [English](#english)
+- [Introduccion y Descripcion](#introduccion-y-descripcion)
+
 ## Información
 
 ### Titulo
@@ -22,17 +32,9 @@ Fecha
 
 - English: Automation and validation tool development for digital processes. 
 
-### Palabras Clave
-
-- Galego: Desenvolvemento, Programación, Automatización, Código Aberto, Ferramentas
-
-- Castellano: Desarrollo, Programación, Herramientas, Animacion, Automatización, Código
-Abierto
-- English: Development, Programming, Tools, Automation, Open Source
-
 ### Resumen
 
-<!-- Castellano -->
+#### Castellano 
 Pese a la importancia del desarrollo de herramientas y procesos de validación de assets en la industria de la animación, no suele enseñarse esta disciplina a nivel educativo. Sin embargo, desarrollar herramientas de automatización, de control de calidad, de validación de procesos, etc. demuestra un conocimiento avanzado de la tarea que se realiza.
 
 Requiere construir un sistema que realice la tarea, minimice el tiempo requerido para hacerla, y cree un resultado final.
@@ -41,7 +43,7 @@ También requiere desarrollar otro sistema cuya función sea analizar y examinar
 
 En este TFG planeo desarrollar herramientas y ampliar mis conocimientos sobre procesos de una producción. Estudiar profundamente una tarea, automatizarla y comprobar su calidad deforma automática, para impulsar el inicio del desarrollo de herramientas dentro de la UDC, y sobre todo dentro de CDAV.
 
-<!-- Galego -->
+#### Galego
 
 A pesar da importancia do desenvolvemento de ferramentas e procesos de validación de assets na industria da animación, non adoita ensinarse esta disciplina a nivel educativo. Con todo, desenvolver ferramentas de automatización, de control de calidade, de validación de procesos, etc. demostra un coñecemento avanzado da tarefa que se realiza.
 
@@ -51,8 +53,7 @@ Tamén require desenvolver outro sistema cuxa función sexa analizar e examinar 
 
 Neste TFG planeo desenvolver ferramentas e ampliar os meus coñecementos sobre procesos dunha produción. Estudar profundamente unha tarefa, automatizala e comprobar a súa calidade de forma automática, para impulsar o inicio do desenvolvemento de ferramentas dentro da UDC, e sobre todo dentro de CDAV.
 
-<!-- English -->
-
+#### English
 Despite the importance of developing asset validation tools and processes in the animation industry, this discipline is not often taught at the educational level. However, developing tools for automation, quality control, process validation, etc. demonstrates advanced knowledge of the task at hand.
 
 It requires building a system that performs the task, minimizes the time required to do it, and creates an end result.
@@ -61,26 +62,19 @@ It also requires developing another system whose function is to analyze and exam
 
 In this dissertation I plan to develop tools and expand my knowledge of production processes. To deeply study a task, automate it and check its quality in an automatic way, to boost the beginning of the development of tools within the UDC, and especially within CDAV.
 
-## Indice de Contenidos
-<!-- Tabla de contenidos  -->
-<!-- ¿Borrar hasta introduccion? -->
-<!-- TOC -->
-- [Información](#información)
-    - [Titulo](#titulo)
-    - [Palabras Clave](#palabras-clave)
-    - [Resumen](#resumen)
-        - [Castellano:](#castellano)
-        - [Galego](#galego)
-        - [English](#english)
-- [Indice de Contenidos](#indice-de-contenidos)
-- [Introduccion y Descripcion](#introduccion-y-descripcion)
-<!-- /TOC -->
+### Palabras Clave
+
+- Galego: Desenvolvemento, Programación, Automatización, Código Aberto, Ferramentas
+
+- Castellano: Desarrollo, Programación, Herramientas, Animacion, Automatización, Código
+Abierto
+- English: Development, Programming, Tools, Automation, Open Source
+
+
 
 ## Introduccion y Descripcion
 
 ### Introduccion
-
-Produccion audiovisual y Pipeline son dos maneras de llamar a lo mismo. Un proceso en el u
 
 <!-- 
 El contenido de este apartado debe versar sobre el TFG, establecimiento de objetivos,

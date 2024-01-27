@@ -14,3 +14,5 @@
 |-----------|--------|-------|
 | Fariña Lamosa | Ángel José | angel.farina@udc.es|
 | Taibo Pena | Francisco Javier | javier.taibo@udc.es
+
+![](diagram.svg)
