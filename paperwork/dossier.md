@@ -119,7 +119,7 @@ conseguir para poder terminar este proyecto? ¿Dónde se exhibirá? ¿Qué reper
 
 1. Docentes con experiencia profesional
     1. `Fativa Davite` (UDC - UTAD) (CFX Lead en Skydance) 
-    1. `Angel Galindo` (UDC - UTAD) (Pipeline TD Able&Baker)
+    1. Angel Galindo (UDC - UTAD) (Pipeline TD Able&Baker)
     1. `Carlos Rico` (UDC) (TD Skydance)
     1. `Jose Maria Tejeda` (Supervising TD - Illusorium)
     1. `Ignacion Martinez de Salazar` (Cofundador y Director academico de Voxel)
