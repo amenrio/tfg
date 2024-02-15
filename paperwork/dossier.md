@@ -13,14 +13,22 @@ Curso: 2023/24
 Fecha
 
 ## Indice de Contenidos
-- [Información](#información)
+- [Desarrollo de herramientas para la automatización y validación de procesos digitales](#desarrollo-de-herramientas-para-la-automatización-y-validación-de-procesos-digitales)
+  - [Indice de Contenidos](#indice-de-contenidos)
+  - [Información](#información)
     - [Titulo](#titulo)
-    - [Palabras Clave](#palabras-clave)
     - [Resumen](#resumen)
-        - [Castellano:](#castellano)
-        - [Galego](#galego)
-        - [English](#english)
-- [Introduccion y Descripcion](#introduccion-y-descripcion)
+      - [Castellano](#castellano)
+      - [Galego](#galego)
+      - [English](#english)
+    - [Palabras Clave](#palabras-clave)
+  - [Introduccion y Descripcion](#introduccion-y-descripcion)
+    - [Introduccion](#introduccion)
+    - [Descripcion](#descripcion)
+  - [Estudio previo y documentacion](#estudio-previo-y-documentacion)
+  - [Elaboracion del Producto](#elaboracion-del-producto)
+  - [Conclusiones](#conclusiones)
+  - [Links](#links)
 
 ## Información
 
@@ -108,6 +116,33 @@ conseguir para poder terminar este proyecto? ¿Dónde se exhibirá? ¿Qué reper
  -->
 
 ## Estudio previo y documentacion
+
+1. Docentes con experiencia profesional
+    1. `Fativa Davite` (UDC - UTAD) (CFX Lead en Skydance) 
+    1. `Angel Galindo` (UDC - UTAD) (Pipeline TD Able&Baker)
+    1. `Carlos Rico` (UDC) (TD Skydance)
+    1. `Jose Maria Tejeda` (Supervising TD - Illusorium)
+    1. `Ignacion Martinez de Salazar` (Cofundador y Director academico de Voxel)
+1. Profesionales
+    1. Antaruxa
+        1. `Brandan Alvarez` (CEO)
+        1. `David Lopez` (Adminstrador de Systemas)
+        1. `Juan Nouche` (Lead Developer)
+        1. `Joaquin Alvarez` (Lighting & Compo)
+    1. Pedro Martinez Martinez (Pipeline TD & Tools en Antaruxa / Senior Render TD Skydance)
+    1. Tomas Poveda Retamosa (Senior Pipelina Animation TD en That's No Moon)
+    1. Miguel Angel Espada (TD Lead Skydance Animation)
+1. Escuelas de españa
+    1. UTAD
+    1. VOXEL
+    1. `ESNE`
+    1. Animum
+1. Escuelas en europa
+    1. The Animation Workshop (Dinamarca)
+1. Empresas de pipeline
+    1. Pipeline Pro (Tenerife)
+
+
 <!-- 
 Contendrá todo el material relacionado con la búsqueda de referencias, estudio de casos, análisis,
 documentación descriptiva del proyecto, problemas y soluciones específicas…
