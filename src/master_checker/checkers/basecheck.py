@@ -12,7 +12,6 @@ Example:
     To create a new checker class, you can inherit from BaseCheck and add your own 'check' and 
     'fix' methods to it.
 
-    ```python
     class MyDepartmentChecker(BaseCheck):
         def __init__(self):
             super().__init__()
@@ -26,11 +25,6 @@ Example:
         def fix_my_check(self, error_list):
             # Your fix logic here
             pass
-    ```
-
-Attributes:
-    data (dict): Dictionary that holds each department checker and their respective methods
-    objects_list (list): List of objects to run the checks on
 """
 
 class BaseCheck():
@@ -38,6 +32,11 @@ class BaseCheck():
 
     This class is the base class for all department checker classes. It contains the basic structure
     and methods that each department's checker class will inherit from.
+
+    Attributes:
+        data (dict): Dictionary that holds each department checker and their respective methods
+        objects_list (list): List of objects to run the checks on
+
     """
 
     def __init__(self):
