@@ -1,11 +1,14 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 # Created by: Andres Mendez <amenrio@gmail.com>
+
 """Rigging Checker Module
 
 This module defines the rigging checker class. This class is a specialized checker class that inherits
 from the NamingCheck and PipelineCheck classes. It contains all the methods and condition managers for
-the rigging department."""
+the rigging department.
+"""
+
 import maya.cmds as cmds
 
 import master_checker.common.condition_manager as CM

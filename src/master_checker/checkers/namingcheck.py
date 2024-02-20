@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 # Created by: Andres Mendez <amenrio@gmail.com>
+
 """Naming Checker Class
 
 This module defines the naming checker class that inherits from the BaseCheck class.

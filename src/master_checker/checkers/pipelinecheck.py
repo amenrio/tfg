@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 # Created by: Andres Mendez <amenrio@gmail.com>
+
 """Pipeline Checkher Module
 
 This module defines the pipeline checker class. This class inherits from the BaseCheck class and
