@@ -14,7 +14,19 @@ import tlc_utils.common.miscutils as misc_utils
 
 
 class MasterChecker:
-    """Master of Checkers class. It"""
+    """The MasterChecker class holds the main logic for running all the checks necessary
+    for the current production department. It also holds the data for all the checks ran.
+    
+    Attributes:
+        scene_objects (list): List of all nodes that need to pass all the pipeline checks
+        departments_to_run (list): List of department checkers to run based on current production department
+        departments_checker_classes (dict): Dictionary for department checker classes:
+            {"department_name": department_checker_class}
+        departments_checker_data (dict): Dictionary for department checker data:
+            {'department_name': {department_check_function: ConditionChecker Class}}
+    TODO:
+        TODO TODO  :)
+    """
 
     def __init__(self, dpt_id="DEFAULT"):
         # List of all nodes that need to pass all the pipeline checks
