@@ -1,60 +1,50 @@
 # Guion preguntas
 
-## Preguntas
-
-### Experiencia personal
+## Experiencia personal
 
 1. ¿Posees estudios relacionados con el sector? ¿Aprendiste algo relacionado antes en la escuela, por tu cuenta, o ya en un trabajo?
-<!-- -->
+
+No
 
 1. ¿Que significa para ti un Pipeline?
-<!-- -->
+
+Procesos, organizacion y control que permiten el traslado de informacion en una produccion audiovisual
 
 1. ¿Cuándo tuviste que enfrentarte a uno por primera vez?
-<!-- -->
+
+En su primer trabajo
 
 1. ¿Que elementos de un pipeline dirias que son los mas importantes?
-<!-- Fatima Davite -->
+
 inOut de departamentos
 
 1. ¿Como de largo fue el periodo de adaptacion?
-<!-- -->
 
-### Implementacion en educacion
+Un par de semanas
+
+## Implementacion en educacion
 
 1. ¿Implementas algun elemento propio de un pipeline en tus clases? ¿Herramientas? ¿Nomenclatura? ¿Seguir un proceso establecido?
-<!-- Nomenclatura y parametrizacion -->
+
+Nomenclatura y estandarizacion
 
 1. ¿Existe algun tipo de conexion entre otras asignaturas, tanto impartidas por ti como por otro docente?
-<!--
-    Modelar un personaje para luego hacer rig en otra asignatura
-    Concept para luego modelar
--->
+
+inOut entre modelado -> riggin, resultado final
 
 1. ¿Existen herramientas disponibles para el alumnado que les permita comprobar la estabilidad del producto o comprobar si es un resultado correcto?
-<!-- -->
+
+No
 
 1. ¿Que elementos serian imprescindibles a la hora de introducir un pipeline al alumnado?
-<!--Estandarizacion e implementacion completa en el trabajo -->
 
-### Competencias
+Estandarizacion e implementacion en todas / la gran mayoria de asignaturas
+
+## Competencias
 
 1. ¿Seria destacable en un curriculum de junior conocimientos sobre pipeline, automatismos, checkers...?
 
-<!-- -->
+Depende del perfil. Un perfil artistico no necesita profundizar tanto como uno tecnico. A ragos generales, un profesional debe saber de donde viene el trabajo que le llega, y realizar su trabajo para no enorpecer los siguientes procesos. El hecho de saber que viene despues, qué y cómo lo necesita, es un plus y hace mejores perfiles profesionales, pero no es algo que todos los perfiles necesiten.
 
 1. ¿Cual consideras que es el mayor talon de aquiles de los alumnos graduandose de las escuelas de animacion o videojuegos?
 
-<!-- -->
-
-### Carlos Rico
-
-#### Experiencia personal
-
-1. No
-1. Reglas y filosofia que marcan el orden de procesos, archivos, y tareas (Las tools unicamente automatizan y ayudan a esas funciones, pero sin pipeline no podrian automatizarse)
-1. NS/NC
-1. Las normas de un pipeline varian entre estudio y estudio, pero lo mas importante son la organizacion y el cumplimiento de las normas de naming, precisamente para permitir desarrollar tools por encima.
-1. NS/NC
-
-#### Implementacion en Educacion
