@@ -1,5 +1,6 @@
 sphinx
 sphinx-rtd-theme
+furo
 ghp-import
 pylint
 pyan3==1.1.1

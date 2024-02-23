@@ -1,3 +1,13 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+# Created by: Andres Mendez <amenrio@gmail.com>
+
+"""Naming Checker Class
+
+This module defines the naming checker class that inherits from the BaseCheck class.
+It contains the methods to run the checks defined in the data dictionary.
+"""
+
 import maya.cmds as cmds
 
 import master_checker.checkers.basecheck as BaseCheck
@@ -8,14 +18,25 @@ import tlc_utils.common.naming as NAMING
 
 class NamingCheck(BaseCheck.BaseCheck):
     """Naming Check Class
-
+    
+    This class is the naming checker class. It contains the methods destined to compare the scene's
+    objects names with the naming pipeline rules.
+    
     Args:
         BaseCheck (class): Abstract checker class
+    Attributes:
+        data (dict): Dictionary that holds each department checker and their respective methods
+        objects_list (list): List of objects to run the checks on
     """
 
     def __init__(self):
+        """Naming Checker Class Constructor
+        
+        Initializes the data dictionary, adds the naming department to it and initializes naming 
+        methods and condition managers.
+        """
         super().__init__()
-        # self.data.clear()
+
         self.data["naming"] = {}
         self.data["naming"]["scene_name"] = CM.ConditionManager(
             name="scene_name",
@@ -107,9 +128,10 @@ class NamingCheck(BaseCheck.BaseCheck):
         )
 
     def check_unique_names(self):
-        """Check function
+        """Method to check for non unique names in the scene
+        
         Searches for PIPE '|' character in node names, if found, adds item to error list
-        Error level is setted if error list is not 0
+        Sets the check's condition manager error level if error list is not 0
         """
         error_list = list()
         for obj in self.objects_list:
@@ -121,13 +143,11 @@ class NamingCheck(BaseCheck.BaseCheck):
         )
 
     def is_group(self, node):
-        """Helper Function
-
+        """Auxiliary method to check if a node is a group
         Args:
             node (str): Node name
-
         Returns:
-            bool: Returns if node is group of other transforms and doesnt have shapes as children
+            bool: True if node is a group, False otherwise
         """
         if not cmds.objectType(node, isType="transform"):
             return False
@@ -141,18 +161,22 @@ class NamingCheck(BaseCheck.BaseCheck):
             return False
 
     def check_groups_id(self):
-        """Checker function
-        Chekcs for every node if its a group with a helper function (is_group)
-        Then checks if groupId part of name is pipeline compliant
-        Sets error level if list_errors is not 0
+        """Method to check for correct group naming
+
+        Using the is_group method, checks every node in the scene to see if it's a group.
+        The object's name is then split into tokens. 
+        If the get_name_tokens doesn't return a list, the object is added to the error list.
+        If the first token is not pipeline compliant, the object is added to the error list.
+        The check's condition manager error level is set to True if the error list is not 0
         """
+
         error_list = list()
         for obj in self.objects_list:
             if self.is_group(obj):
-                obj_name_parts = self.get_nice_name(obj)
-                if not isinstance(obj_name_parts, list):
+                obj_name_tokens = self.get_name_tokens(obj)
+                if not isinstance(obj_name_tokens, list):
                     error_list.append(obj)
-                if obj_name_parts[0] not in NAMING.naming_maya.get("group"):
+                if obj_name_tokens[0] not in NAMING.naming_maya.get("group"):
                     error_list.append(obj)
         self.data["naming"]["groups_id"].set_elements(error_list)
         self.data["naming"]["groups_id"].set_error_level(
@@ -160,16 +184,20 @@ class NamingCheck(BaseCheck.BaseCheck):
         )
 
     def check_nodes_id(self):
-        """Chekcer function
-        Checks for every node if nodes_id mathces naming pipeline rules
-        Sets error level if error_list is not 0
+        """Method to check id token for every node in the scene
+
+        If the get_name_tokens doesn't return a list, the object is added to the error list.
+        If the first token is not pipeline compliant, the object is added to the error list.
+        The check's condition manager error level is set to True if the error list is not 0
+        
+        TODO: Add methods to check each node-type rules (geometry, locators, splines, cameras, etc)
         """
         error_list = list()
         for obj in self.objects_list:
-            obj_name_parts = self.get_nice_name(obj)
-            if not isinstance(obj_name_parts, list):
+            obj_name_tokens = self.get_name_tokens(obj)
+            if not isinstance(obj_name_tokens, list):
                 error_list.append(obj)
-            if obj_name_parts[0] not in NAMING.naming_maya.values():
+            if obj_name_tokens[0] not in NAMING.naming_maya.values():
                 error_list.append(obj)
 
         self.data["naming"]["nodes_id"].set_elements(error_list)
@@ -178,16 +206,18 @@ class NamingCheck(BaseCheck.BaseCheck):
         )
 
     def check_position_field(self):
-        """Checker function
-        Checks for every node if its position_field matches naming pipeline rules
-        Sets error level if error_list is not 0
+        """Method to check the position field token for every node in the scene
+
+        If the get_name_tokens doesn't return a list, the object is added to the error list.
+        If the second token is not pipeline compliant, the object is added to the error list.
+        The check's condition manager error level is set to True if the error list is not 0
         """
         error_list = list()
         for obj in self.objects_list:
-            obj_name_parts = self.get_nice_name(obj)
-            if not isinstance(obj_name_parts, list):
+            obj_name_tokens = self.get_name_tokens(obj)
+            if not isinstance(obj_name_tokens, list):
                 error_list.append(obj)
-            if obj_name_parts[1] not in NAMING.location_flags.values():
+            if obj_name_tokens[1] not in NAMING.location_flags.values():
                 error_list.append(obj)
 
         self.data["naming"]["position_field"].set_elements(error_list)
@@ -203,17 +233,16 @@ class NamingCheck(BaseCheck.BaseCheck):
         print(error_elements)
 
     def check_node_fields(self):
-        """Checker function
-        Checks for every node if its node Fields are 3
-        Sets error level if error_list is not 0
+        """Method to check if every node's name has only 3 tokens
 
-        Returns:
-            list: Error objects
+        If the get_name_tokens doesn't return a list with 3 elements, the object is added to
+        the error list.
+        The check's condition manager error level is set to True if the error list is not 0
         """
         error_objects = []
 
         for obj in self.objects_list:
-            obj_nice_name = self.get_nice_name(obj)
+            obj_nice_name = self.get_name_tokens(obj)
             if len(obj_nice_name) != 3:
                 error_objects.append(obj)
 
@@ -222,37 +251,38 @@ class NamingCheck(BaseCheck.BaseCheck):
         #          CM.ConditionErrorCriteria.ERROR_WHEN_NOT_ZERO)
         # return error_objects
 
-    def get_nice_name(self, name_obj):
-        """Helper function
+    def get_name_tokens(self, name_obj):
+        """Recursive method to get the tokens from a node name
+
+        Using the find method, checks for these characters in the node name ['_', ':', '|'].
+        If it doesn't find a '_', returns the name_obj.
+        If it finds a ':' (Namespace), it calls itself with the last token, ignoring the namespace and
+        returns the resulting operation.
+        If it finds a '|', it calls itself with the last token, ignoring the parent, and returns the
+        resulting operation.
+        If those conditions are not met, it splits the name_obj using the '_' character and returns
+        the resulting list.
 
         Args:
-            name_obj (str): Node Name
+            name_obj (str): Node name
 
         Returns:
-            list: List of node_fields
+            tokens (list): List of tokens
+
+        TODO: Differentiate between namespace and parent errors
         """
         if name_obj.find("_") == -1:
             return name_obj
         if name_obj.find(":") != -1:
-            return self.get_nice_name(name_obj.split(":")[-1])
+            return self.get_name_tokens(name_obj.split(":")[-1])
         if name_obj.find("|") != -1:
-            return self.get_nice_name(name_obj.split("|")[-1])
-        output = name_obj.split("_")
-        return output
+            return self.get_name_tokens(name_obj.split("|")[-1])
+        tokens = name_obj.split("_")
+        return tokens 
 
-    def fix_node_fields(self, error_objects):
-        """Fix function
-        not implemented yet
-
-        Args:
-            error_objects (list): error_objects
+    def fix_node_fields(self):
+        """TODO
         """
-        for o in error_objects:
-            if len(o.split("_")) == 2:
-                cmds.rename(o, o + "_")
-            elif len(o.split("_")) == 1:
-                cmds.rename(o, "_" + o + "_")
-
     # def checkFoldersStructure(self):
 
     # def fixFoldersStructure(self):

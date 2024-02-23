@@ -1,3 +1,12 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+# Created by: Andres Mendez <amenrio@gmail.com>
+
+"""Pipeline Checkher Module
+
+This module defines the pipeline checker class. This class inherits from the BaseCheck class and
+contains all the checks and condition managers for the pipeline department.
+"""
 import maya.cmds as cmds
 
 import master_checker.common.condition_manager as CM
@@ -12,11 +21,26 @@ from tlc_utils.common import miscutils
 class PipelineCheck(BaseCheck.BaseCheck):
     """Pipeline Checker Class
 
+    This class contains all the methods and condition managers for the pipeline department.
+
     Args:
         BaseCheck (Class): Base Checker Class
+
+    Attributes:
+        data (dict): Dictionary that holds each department checker and their respective methods
+        objects_list (list): List of objects to run the checks on
+
+    TODO:
+        - Add the rest of the checks
+        - Add the fix methods for each check
     """
 
     def __init__(self):
+        """Pipeline Checker Class Constructor
+
+        Initializes the data dictionary, adds the pipeline department's methods and condition managers
+        to it, and initializes the objects_list list.
+        """
         super().__init__()
         # self.data.clear()
         self.data["pipeline"] = dict()
@@ -102,7 +126,10 @@ class PipelineCheck(BaseCheck.BaseCheck):
         )
 
     def check_empty_nodes(self):
-        """_summary_"""
+        """Method to check for empty nodes in the scene
+
+        The check condition manager error level is set to ERROR_WHEN_NOT_ZERO
+        """
         error_list = miscutils.getEmptyGroups()
         self.data["pipeline"]["empty_nodes"].set_elements(error_list)
         self.data["pipeline"]["empty_nodes"].set_error_level(
@@ -110,8 +137,9 @@ class PipelineCheck(BaseCheck.BaseCheck):
         )
 
     def check_set_project(self):
-        """Checks that the last folder of the current setted workspace is pipeline compliant
-        sets error if las folder is different from pipeline naming guide
+        """Method to check if the current workspace is set to a pipeline compliant project structure
+
+        The check condition manager error level is set to ERROR_WHEN_NOT_ZERO
         """
         # Get current workspace root folder
         current_workspace = cmds.workspace(q=True, rd=True)
@@ -125,7 +153,11 @@ class PipelineCheck(BaseCheck.BaseCheck):
         )
 
     def check_namespace(self):
-        """Checks the scene namespaces (minus defaut ones), sets error level if not zero"""
+        """Method to check for namespaces in the scene.
+
+        Ignoring default namespaces (UI, shared), the check condition manager error level
+        is set to ERROR_WHEN_NOT_ZERO
+        """
         # Returns namespace list
         namespace_list = cmds.namespaceInfo(listOnlyNamespaces=True, recurse=True)
         # Removes default values
@@ -140,7 +172,11 @@ class PipelineCheck(BaseCheck.BaseCheck):
         )
 
     def check_scales(self):
-        """Checks every node scale and sets error level if the scale is not (1, 1, 1)"""
+        """Method to check for scale values in the scene.
+
+        If a node has a scale different from (1, 1, 1), it will be set as an error.
+        The check condition manager error level is set to ERROR_WHEN_NOT_ZERO
+        """
         error_objects = []
 
         for obj in self.objects_list:
@@ -159,19 +195,6 @@ class PipelineCheck(BaseCheck.BaseCheck):
         self.data["pipeline"]["scales"].set_error_level(
             CM.ConditionErrorCriteria.ERROR_WHEN_NOT_ZERO
         )
-
-    def fix_scales(self, error_objects):
-        """Fix function for scale checklist
-        Sets transform node scale to 1
-        DANGEROUS, ONLY TESTING PURPOSE
-
-        Args:
-            error_objects (list): List of objects setted as errors.
-        """
-        for o in error_objects:
-            cmds.setAttr((o + ".scaleX"), 1)
-            cmds.setAttr((o + ".scaleY"), 1)
-            cmds.setAttr((o + ".scaleZ"), 1)
 
     def check_folder_structure(self):
         """TODO
