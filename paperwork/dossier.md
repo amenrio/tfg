@@ -13,6 +13,7 @@ Curso: 2023/24
 Fecha
 
 ## Indice de Contenidos
+
 - [Desarrollo de herramientas para la automatización y validación de procesos digitales](#desarrollo-de-herramientas-para-la-automatización-y-validación-de-procesos-digitales)
   - [Indice de Contenidos](#indice-de-contenidos)
   - [Información](#información)
@@ -43,6 +44,7 @@ Fecha
 ### Resumen
 
 #### Castellano 
+
 Pese a la importancia del desarrollo de herramientas y procesos de validación de assets en la industria de la animación, no suele enseñarse esta disciplina a nivel educativo. Sin embargo, desarrollar herramientas de automatización, de control de calidad, de validación de procesos, etc. demuestra un conocimiento avanzado de la tarea que se realiza.
 
 Requiere construir un sistema que realice la tarea, minimice el tiempo requerido para hacerla, y cree un resultado final.
@@ -62,6 +64,7 @@ Tamén require desenvolver outro sistema cuxa función sexa analizar e examinar 
 Neste TFG planeo desenvolver ferramentas e ampliar os meus coñecementos sobre procesos dunha produción. Estudar profundamente unha tarefa, automatizala e comprobar a súa calidade de forma automática, para impulsar o inicio do desenvolvemento de ferramentas dentro da UDC, e sobre todo dentro de CDAV.
 
 #### English
+
 Despite the importance of developing asset validation tools and processes in the animation industry, this discipline is not often taught at the educational level. However, developing tools for automation, quality control, process validation, etc. demonstrates advanced knowledge of the task at hand.
 
 It requires building a system that performs the task, minimizes the time required to do it, and creates an end result.
@@ -76,9 +79,8 @@ In this dissertation I plan to develop tools and expand my knowledge of producti
 
 - Castellano: Desarrollo, Programación, Herramientas, Animacion, Automatización, Código
 Abierto
+
 - English: Development, Programming, Tools, Automation, Open Source
-
-
 
 ## Introduccion y Descripcion
 
@@ -119,7 +121,7 @@ conseguir para poder terminar este proyecto? ¿Dónde se exhibirá? ¿Qué reper
 
 1. Docentes con experiencia profesional
     1. `Fativa Davite` (UDC - UTAD) (CFX Lead en Skydance) 
-    1. Angel Galindo (UDC - UTAD) (Pipeline TD Able&Baker)
+    1. `Angel Galindo` (UDC - UTAD) (Pipeline TD Able&Baker)
     1. `Carlos Rico` (UDC) (TD Skydance)
     1. `Jose Maria Tejeda` (Supervising TD - Illusorium)
     1. `Ignacion Martinez de Salazar` (Cofundador y Director academico de Voxel)
@@ -131,7 +133,7 @@ conseguir para poder terminar este proyecto? ¿Dónde se exhibirá? ¿Qué reper
         1. `Joaquin Alvarez` (Lighting & Compo)
     1. Pedro Martinez Martinez (Pipeline TD & Tools en Antaruxa / Senior Render TD Skydance)
     1. Tomas Poveda Retamosa (Senior Pipelina Animation TD en That's No Moon)
-    1. Miguel Angel Espada (TD Lead Skydance Animation)
+    1. `Miguel Angel Espada` (TD Lead Skydance Animation)
 1. Escuelas de españa
     1. UTAD
     1. VOXEL
