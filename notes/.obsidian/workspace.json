@@ -1,0 +1,159 @@
+{
+  "main": {
+    "id": "6d6821d5c5bd1d52",
+    "type": "split",
+    "children": [
+      {
+        "id": "398c668a14315606",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "83897a92c49b27ff",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Preguntas.md",
+                "mode": "source",
+                "source": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "45f152dc1cc0c125",
+    "type": "split",
+    "children": [
+      {
+        "id": "b899f65faf6d1a8c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "bef9ae0e074f94d1",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "fc5e5154cde959b4",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "481e29ece6fd2f4a",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "019952a650556e56",
+    "type": "split",
+    "children": [
+      {
+        "id": "dcd95da85a7d5b7f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "09fc4b008b6bcac9",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Preguntas.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "3639bc96b32950cf",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Preguntas.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "a6e185ab397e3026",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "c2810a5c1b04cbc5",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Preguntas.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "83897a92c49b27ff",
+  "lastOpenFiles": [
+    "Untitled.canvas",
+    "Preguntas.md",
+    "Marco Teorico.md",
+    "FOSS.md",
+    "Estudio del Arte.md",
+    "TFG.md",
+    "USD.md"
+  ]
+}

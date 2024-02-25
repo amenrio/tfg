@@ -32,7 +32,8 @@ class MasterChecker:
         # List of all nodes that need to pass all the pipeline checks
         self.scene_objects = []
         # Gets list of department checkers to run based on current production department
-        self.departmemnts_to_run = pipeline_utils.checkers_from_dptID.get(dpt_id)
+        self.departments_to_run = ["pipeline","naming"]
+        self.departments_to_run.extend(pipeline_utils.checkers_from_dptID.get(dpt_id))
         # Dictionary for department checker classes:
         # {"department_name": department_checker_class}
         self.departments_checker_classes = dict()
@@ -48,7 +49,7 @@ class MasterChecker:
         Returns:
             _type_: _description_
         """
-        for department in self.departmemnts_to_run:
+        for department in self.departments_to_run:
             department_checker_class = self.get_department_class_instance(department)
             self.departments_checker_classes.update(
                 {department: department_checker_class()}

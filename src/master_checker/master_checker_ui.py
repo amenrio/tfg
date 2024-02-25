@@ -49,9 +49,8 @@ class MasterCheckerUI(qtutils.CheckerWindow):
     """
 
     def __init__(self, department="DEFAULT", parent=qtutils.getMayaMainWindow()):
-        ui_file = f"{os.path.splitext(os.path.basename(__file__))[0]}2.ui"
+        ui_file = f"{os.path.splitext(os.path.basename(__file__))[0]}.ui"
         title = "Master of Checkers"
-        print(ui_file)
         super(MasterCheckerUI, self).__init__(
             f"{os.path.dirname(__file__)}/ui/{ui_file}", title, parent
         )
@@ -68,6 +67,7 @@ class MasterCheckerUI(qtutils.CheckerWindow):
 
     def _init_step_toolbox(self, department):
         department_checker_class = self.main.departments_checker_classes.get(department)
+
         department_toolbox = CustomToolbox.CustomToolbox(
             department, department_checker_class
         )

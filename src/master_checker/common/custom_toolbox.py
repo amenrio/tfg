@@ -45,9 +45,9 @@ class CustomToolbox(QWidget):
         # Instance of the same department checker class
         self.checker_class = checker_class_object
 
-        self.data = self.checker_class.get(self.department_name)
+        self.data = self.checker_class.data.get(self.department_name)
 
-        self.table = QTableWidget(0,0)
+        self.table = QTableWidget(2,2)
         
         self.column_labels = ["Name", "Status"]
 
@@ -56,6 +56,8 @@ class CustomToolbox(QWidget):
         self.vertical_layout = QVBoxLayout()
 
         self.create_layout()
+        self.foo()
+
 
     def create_layout(self):
         """_summary_
@@ -68,6 +70,7 @@ class CustomToolbox(QWidget):
         self.header_button.setStyleSheet(HEADER_BUTTON_STYLESHEET)
 
         self.vertical_layout.addWidget(self.header_button)
+        self.vertical_layout.addWidget(self.table)
         self.setLayout(self.vertical_layout)
 
     def foo(self):
@@ -77,30 +80,31 @@ class CustomToolbox(QWidget):
         for row, dpt_step in enumerate(self.data):
             
             condition_checker = self.data.get(dpt_step)
-            
-            row_item = QTableWidgetItem(condition_checker.displayName)
+            print(condition_checker.display_name)
+            row_item = QTableWidgetItem(condition_checker.display_name)
             row_value = QTableWidgetItem("")
-            
-            row_item.setToolTip(condition_checker.toolTip)
-            row_value.setTextAlignment(Qt.AlignCenter)
-            row_value.setToolTip(condition_checker.toolTip)
-    
             self.table.setItem(row, 0, row_item)
+
             self.table.setItem(row, 1, row_value) 
-            self.step_index_table.update({dpt_step:row})
+            
+            row_item.setToolTip(condition_checker.tooltip)
+            row_value.setTextAlignment(Qt.AlignCenter)
+            row_value.setToolTip(condition_checker.tooltip)
+    
+            #self.step_index_table.update({dpt_step:row})
             self.set_row_error_level(dpt_step, condition_checker, row_item, row_value)
 #        for department_setp, department_condition_checker in self.data.items():
 #            self.set_checker_row_error_level(department_setp, department_condition_checker)
 
     def set_row_error_level(self, dpt_step, condition_checker, row_item, row_value):
-        error_level = condition_checker.errorLevel
+        error_level = condition_checker.error_level
 
-        bg_color, fg_color, text_color = self.get_error_level_colors(error_level)
+        #bg_color, fg_color, text_color = self.get_error_level_colors(error_level)
 
-        # Movidas de ConditionErrorLevel que no me gustan demasiado
+        ## Movidas de ConditionErrorLevel que no me gustan demasiado
 
-        row_item.setForeground(text_color)
-        row_value.setForeground(fg_color)
-        row_value.setBackground(bg_color)
+        #row_item.setForeground(text_color)
+        #row_value.setForeground(fg_color)
+        #row_value.setBackground(bg_color)
 
-        self.update_header_color(dpt_step, error_level)
+        #self.update_header_color(dpt_step, error_level)

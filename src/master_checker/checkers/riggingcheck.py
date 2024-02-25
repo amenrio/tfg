@@ -45,13 +45,9 @@ class RiggingCheck(NamingCheck, PipelineCheck):
 
         self.data["rigging"] = dict()
         # self.data.update({"rigging":{}})
-        self.data["naming"]["joint_naming"] = {
-            CM.ConditionManager(
+        self.data["naming"]["joint_naming"] = CM.ConditionManager(
                 name="joint_naming", display_name="Joint Naming", tooltip="Joint Naming"
             )
-        }
-        self.data["rigging"]["rigging_test"] = {
-            CM.ConditionManager(
+        self.data["rigging"]["rigging_test"] = CM.ConditionManager(
                 name="rigging_test", display_name="rigging_test", tooltip="Rig Test"
             )
-        }
