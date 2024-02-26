@@ -2,3 +2,5 @@
 ## [[Estudio del Arte]]
 ## [[Desarrollo]]
 ## [[Preguntas]]
+## [[Qué quiero]]
+## [[Que necesito saber]]

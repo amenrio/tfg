@@ -13,9 +13,27 @@
             "state": {
               "type": "markdown",
               "state": {
+                "file": "Que necesito saber.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "75cfd4567854f32f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "506ffaf3f715d0b1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
                 "file": "Preguntas.md",
                 "mode": "source",
-                "source": true
+                "source": false
               }
             }
           }
@@ -48,7 +66,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#checkers",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -65,7 +83,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -85,7 +104,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Preguntas.md",
+                "file": "Que necesito saber.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Preguntas.md",
+                "file": "Que necesito saber.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +144,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Preguntas.md"
+                "file": "Que necesito saber.md"
               }
             }
           }
@@ -133,7 +152,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
+    "width": 799.5,
     "collapsed": true
   },
   "left-ribbon": {
@@ -148,12 +167,22 @@
   },
   "active": "83897a92c49b27ff",
   "lastOpenFiles": [
-    "Untitled.canvas",
+    "Que necesito saber.md",
     "Preguntas.md",
+    "TFG.md",
+    "Desarrollo.md",
+    "Qué quiero.md",
+    "Respuestas.md",
+    "Ángel Galindo (Able&Baker).md",
+    "Esquema.canvas",
+    "Untitled.canvas",
+    "Untitled 2.canvas",
+    "Untitled 1.canvas",
+    "Untitled 3.canvas",
+    "2024-02-26.md",
     "Marco Teorico.md",
     "FOSS.md",
     "Estudio del Arte.md",
-    "TFG.md",
     "USD.md"
   ]
 }
