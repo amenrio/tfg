@@ -13,24 +13,6 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Que necesito saber.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          }
-        ]
-      },
-      {
-        "id": "75cfd4567854f32f",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "506ffaf3f715d0b1",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
                 "file": "Preguntas.md",
                 "mode": "source",
                 "source": false
@@ -83,8 +65,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -104,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Que necesito saber.md",
+                "file": "Preguntas.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Que necesito saber.md",
+                "file": "Preguntas.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -144,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Que necesito saber.md"
+                "file": "Preguntas.md"
               }
             }
           }
