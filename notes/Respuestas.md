@@ -1,1 +1,0 @@
-- [[Ángel Galindo (Able&Baker)]]

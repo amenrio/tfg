@@ -17,7 +17,6 @@ Almacenar información del resultado del checker
 - Que resultado tuvo (Log Diary)
 - Que modificaciones o fixes lanzó / sobrescribió
 ## Un publisher (Porque van anclados siempre a checkers)
-
 ## Un generador de proyectos 
 #herramientas #generador_proyectos
 Basado en la estructura de la universidad (Refactorizar mi propio código y dejarlo #ProductionReady
